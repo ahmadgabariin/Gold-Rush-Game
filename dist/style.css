@@ -1,0 +1,64 @@
+body {
+    margin: 0px;
+}
+#grid-head {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    height: 10%;
+}
+#grid-body {
+    height: 80%;
+}
+#grid-bottom {
+    height: 10%;
+}
+#player2 {
+    display: grid;
+    justify-items: flex-end;
+}
+
+.column {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: blue;
+    border-left: 1px white solid;
+    border-right: 1px white solid;
+  
+    height: 100%;
+}
+
+.row {
+    background-color: red;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+}
+
+#container {
+    height:100vh;
+    background-color: #BDB2FF;
+}
+
+span {
+    font-size: 3vw ;
+    font-family: "Sofia", sans-serif;
+}
+
+.player1-score {
+    margin-left: 3vw;
+}
+.player2-score {
+    margin-right: 3vw;
+}
+
+.coin {
+    width: 18%;
+}
+
+.player1-img {
+    width: 30%;
+}
+
+.player2-img {
+    width: 30%;
+}
