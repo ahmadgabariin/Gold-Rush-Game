@@ -1,9 +1,10 @@
 const board = new GoldRush(10 , 10)
 const renderer = new Renderer()
 
-renderer.renderBoard(board.matrix)
 
-
+$(`#btn-stat-game`).on(`click`, function () {
+    renderer.renderBoard(board.matrix)
+})
 
 $(`body`).keydown(function(e) {
     console.log(e.key)
@@ -17,19 +18,19 @@ $(`body`).keydown(function(e) {
         break
        
         case `d` :
-            board.movePlayer(1, )
+            board.movePlayer(1, `right`)
         break
 
         case `w` :
-            board.movePlayer(1, ``)
+            board.movePlayer(1, `up`)
         break
 
         case `ArrowUp` :
-            board.movePlayer(2, ``)
+            board.movePlayer(2, `up`)
         break
 
         case `ArrowDown` :
-            board.movePlayer(2, ``)
+            board.movePlayer(2, `down`)
         break
 
         case `ArrowLeft` :
@@ -37,7 +38,7 @@ $(`body`).keydown(function(e) {
         break
 
         case `ArrowRight` :
-            board.movePlayer(2, ``)
+            board.movePlayer(2, `right`)
         break
 
     }

@@ -25,6 +25,11 @@ class Renderer {
         });   
     }
 
+    renderScores () {
+        $(`.player1-score`).text(board.player1.points)
+        $(`.player2-score`).text(board.player2.points)
+    }
+
     renderBoard (matrix) { 
         let gridBody = $(`#grid-body`)
         gridBody.empty()
@@ -34,7 +39,6 @@ class Renderer {
         let newHTML = TEMPLATE({'matrix' : matrix})
         gridBody.append(newHTML)
         this.setGrid()
-        $(`.player1-score`).text(board.player1.points)
-        $(`.player2-score`).text(board.player2.points)
+        this.renderScores()
     }
 }

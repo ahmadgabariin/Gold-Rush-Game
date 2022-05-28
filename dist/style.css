@@ -11,17 +11,29 @@ body {
 }
 #grid-bottom {
     height: 10%;
+    display: grid;
+   align-items: center;
+  
+}
+#btn-stat-game {
+    margin-left: 1vw;
+    font-size: 2.5vw;
+    width: 40%;
+    background-color: green;
+    border-radius: 5vw;
+    border: none;
+    font-family: "Trirong", serif;
 }
 #player2 {
     display: grid;
     justify-items: flex-end;
+    align-items: center;
 }
 
 .column {
     display: grid;
     justify-items: center;
     align-items: center;
-    background-color: blue;
     border-left: 1px white solid;
     border-right: 1px white solid;
   
@@ -29,14 +41,14 @@ body {
 }
 
 .row {
-    background-color: red;
     border-top: 1px white solid;
     border-bottom: 1px white solid;
 }
 
 #container {
     height:100vh;
-    background-color: #BDB2FF;
+    background-color: #8338EC;
+   
 }
 
 span {
@@ -61,4 +73,14 @@ span {
 
 .player2-img {
     width: 30%;
+}
+
+#play1-title {
+    display: grid;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+#btn-stat-game:hover {
+    background-color: aquamarine;
 }
