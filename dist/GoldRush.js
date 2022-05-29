@@ -3,12 +3,22 @@ class GoldRush extends Matrix{
         super(numRows , numCoulmns)
         this.player1 = new Player(0, 0)
         this.player2 = new Player(this.numRows - 1, this.numCoulmns - 1)
+        this.winner = { isThereAWinner : false , winner : ``}
     }
 
-    checkIfItsACoin (player) {
+    checkIfItsACoin = player => {
         if (this.matrix[player.x][player.y] === `c`) {
            player.points++
         }
+        if(player.points >= board.coinsNumber / 2) {
+            this.winner.isThereAWinner = true
+            if (this.player1 === player)
+                this.winner.winner = `player 1`
+            else  {
+                this.winner.winner = `player 2`
+            }
+        }
+
     }
 
     playerMoveDown  = player => {
@@ -120,5 +130,6 @@ class GoldRush extends Matrix{
             default :
             console.log(`Wrong movement !`) 
         }
+        
     }
 }

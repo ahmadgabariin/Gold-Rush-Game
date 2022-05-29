@@ -3,6 +3,7 @@ class Matrix {
         this.numRows = numRows
         this.numCoulmns = numCoulmns
         this.matrix = this.generateMatrix(numRows , numCoulmns)
+        this.coinsNumber = 0
         this.generateCoins()
     }
 
@@ -10,8 +11,9 @@ class Matrix {
         let row = Math.random() * number
         return Math.floor(row)
     }
-    generateCoins () {
+    generateCoins = () => {
         let coins = this.generateRandom(this.numRows) + this.numRows
+        this.coinsNumber = coins
         while (coins) {
             let row = this.generateRandom(this.numRows)
             let column = this.generateRandom(this.numCoulmns)

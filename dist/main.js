@@ -1,4 +1,4 @@
-const board = new GoldRush(10 , 10)
+let board = new GoldRush(10 , 10)
 const renderer = new Renderer()
 
 
@@ -43,5 +43,14 @@ $(`body`).keydown(function(e) {
 
     }
     renderer.renderBoard(board.matrix)
+
+    if (board.winner.isThereAWinner) {
+        board.winner.isThereAWinner = false
+        alert(board.winner.winner + ` Won !`)
+        $(`#grid-body`).empty()
+        $(`.player2-score`).text(0)
+        $(`.player1-score`).text(0)
+        board = new GoldRush(10 , 10)
+    }
   });
 
